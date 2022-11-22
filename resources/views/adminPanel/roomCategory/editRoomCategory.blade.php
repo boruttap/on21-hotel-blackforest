@@ -6,7 +6,7 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h3 class="m-0 font-weight-bold text-primary">Kategorie bearbeiten</h3>
-                <h6> <a href="#" class="float-left btn btn-success btn-sm">Zurück zu allen Kategorien</a></h6>
+                <h6> <a href="{{url('admin/roomcategory')}}" class="float-left btn btn-success btn-sm">Zurück zu allen Kategorien</a></h6>
             </div>
             <div class="card-body">
                 <div class="table-responsive">

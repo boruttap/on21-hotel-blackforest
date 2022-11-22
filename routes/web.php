@@ -23,7 +23,7 @@ Route::get('admin', function () {
 });
 
 Route::get('admin/roomcategory/create', function () {
-    return view('/adminPanel/dashboard');
+    return view('/adminPanel/roomCategory/createRoomCategory');
 });
 
 Route::get('admin/roomcategory', function () {
@@ -34,6 +34,6 @@ Route::get('admin/roomcategory/edit', function () {
     return view('/adminPanel/roomCategory/editRoomCategory');
 });
 
-Route::get('admin/roomcategory/selected', function () {
+Route::get('admin/roomcategory/show', function () {
     return view('/adminPanel/roomCategory/showSelectedCategory');
 });

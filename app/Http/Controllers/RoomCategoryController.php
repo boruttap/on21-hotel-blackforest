@@ -15,7 +15,7 @@ class RoomCategoryController extends Controller
     public function index()
     {
         $categorydata=RoomCategory::All();
-        return view('adminpanel/roomcategory/showallcategorys',['data'=>$categorydata]);
+        return view('adminpanel/roomcategory/showallcategorys',['categorydata'=>$categorydata]);
     }
 
     /**
@@ -41,7 +41,7 @@ class RoomCategoryController extends Controller
         $categorydata->roomdescription=$request->description;
         $categorydata->save();
 
-        return redirect('admin/roomcategory/create')->with('success', 'Die Kategorie wurde hinzugefügt.');
+        return redirect('admin/roomcategory/')->with('success', 'Die Kategorie wurde hinzugefügt.');
     }
 
     /**

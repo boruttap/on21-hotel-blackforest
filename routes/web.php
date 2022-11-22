@@ -22,14 +22,18 @@ Route::get('admin', function () {
     return view('/adminPanel/dashboard');
 });
 
+Route::get('admin/roomcategory/create', function () {
+    return view('/adminPanel/dashboard');
+});
+
 Route::get('admin/roomcategory', function () {
-    return view('/adminPanel/roomCategory/showAll');
+    return view('/adminPanel/roomCategory/showAllCategorys');
 });
 
 Route::get('admin/roomcategory/edit', function () {
     return view('/adminPanel/roomCategory/editRoomCategory');
 });
 
-Route::get('admin/roomcategory/specificcategory', function () {
-    return view('/adminPanel/roomCategory/showSpecificCategory');
+Route::get('admin/roomcategory/selected', function () {
+    return view('/adminPanel/roomCategory/showSelectedCategory');
 });

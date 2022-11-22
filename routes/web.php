@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RoomCategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,18 +23,6 @@ Route::get('admin', function () {
     return view('/adminPanel/dashboard');
 });
 
-Route::get('admin/roomcategory/create', function () {
-    return view('/adminPanel/roomCategory/createRoomCategory');
-});
+Route::resource('admin/roomcategory', RoomCategoryController::class);
 
-Route::get('admin/roomcategory', function () {
-    return view('/adminPanel/roomCategory/showAllCategorys');
-});
 
-Route::get('admin/roomcategory/edit', function () {
-    return view('/adminPanel/roomCategory/editRoomCategory');
-});
-
-Route::get('admin/roomcategory/show', function () {
-    return view('/adminPanel/roomCategory/showSelectedCategory');
-});

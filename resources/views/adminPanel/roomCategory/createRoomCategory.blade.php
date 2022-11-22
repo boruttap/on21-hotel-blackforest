@@ -9,6 +9,8 @@
                 <h6> <a href="{{url('admin/roomcategory')}}" class="float-left btn btn-success btn-sm">Zurück zu allen Kategorien</a></h6>
             </div>
             <div class="card-body">
+                <form method="post" action="{{url('admin/roomcategory')}}">
+                    @csrf
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
@@ -28,6 +30,7 @@
                         </tbody>
                     </table>
                 </div>
+                </form>
             </div>
         </div>
 

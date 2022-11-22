@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('admin', function () {
     return view('/adminPanel/dashboard');
 });
+
+Route::get('admin/roomcategory', function () {
+    return view('/adminPanel/roomCategory/showAll');
+});

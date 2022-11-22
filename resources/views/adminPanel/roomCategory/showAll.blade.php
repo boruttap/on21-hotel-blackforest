@@ -15,14 +15,12 @@
                         <tr>
                             <th>#</th>
                             <th>Kategorie</th>
-                            <th>Bezeichnung</th>
                             <th>Aktion</th>
                         </tr>
                         </thead>
                         <tbody>
-                                    <td>ZimmerID</td>
-                                    <td>Bezeichnung</td>
-                                    <td>Beschreibung</td>
+                                    <td>Dynamische ID</td>
+                                    <td>Dynamische Kategorie</td>
                                     <td>
                                         <a href="#" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
                                         <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>

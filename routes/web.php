@@ -25,3 +25,7 @@ Route::get('admin', function () {
 Route::get('admin/roomcategory', function () {
     return view('/adminPanel/roomCategory/showAll');
 });
+
+Route::get('admin/roomcategory/edit', function () {
+    return view('/adminPanel/roomCategory/editRoomCategory');
+});

@@ -5,8 +5,8 @@
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Alle Zimmer</h6>
-                <h6> <a href="#" class="float-left btn btn-success btn-sm">Neues Zimmer hinzufügen.</a></h6>
+                <h3 class="m-0 font-weight-bold text-primary">Alle Zimmer</h3>
+                <h6> <a href="#" class="float-left btn btn-success btn-sm">Neues Zimmer hinzufügen</a></h6>
             </div>
             <div class="card-body">
                 <div class="table-responsive">

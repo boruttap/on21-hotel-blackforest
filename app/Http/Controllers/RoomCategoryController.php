@@ -39,6 +39,7 @@ class RoomCategoryController extends Controller
         $categorydata = new RoomCategory;
         $categorydata->roomcategory=$request->category;
         $categorydata->roomdescription=$request->description;
+        $categorydata->price=$request->price;
         $categorydata->save();
 
         return redirect('admin/roomcategory/')->with('success', 'Die Kategorie wurde hinzugefügt.');
@@ -80,6 +81,7 @@ class RoomCategoryController extends Controller
         $categorydata = RoomCategory::find($id);
         $categorydata->roomcategory=$request->category;
         $categorydata->roomdescription=$request->description;
+        $categorydata->price=$request->price;
         $categorydata->save();
 
         return redirect('admin/roomcategory/')->with('success', 'Die Kategorie wurde hinzugefügt.');

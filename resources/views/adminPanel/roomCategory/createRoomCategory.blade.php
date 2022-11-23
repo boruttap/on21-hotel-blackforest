@@ -17,12 +17,14 @@
                         <tr>
                             <th>Kategorie</th>
                             <th>Bezeichnung</th>
+                            <th>Preis (€)</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td><input name="category" type="text" class="form-control" /></td>
                             <td><input name="description" type="text" class="form-control" /></td>
+                            <td><input name="price" type="number" class="form-control"></td>
                             <td>
                                 <input type="submit" class="btn btn-primary">
                             </td>

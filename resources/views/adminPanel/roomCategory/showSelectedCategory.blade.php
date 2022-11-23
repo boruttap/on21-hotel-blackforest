@@ -15,11 +15,13 @@
                         <tr>
                             <th>Kategorie</th>
                             <th>Beschreibung</th>
+                            <th>Preis</th>
                         </tr>
                         </thead>
                         <tbody>
                         <td>{{$categorydata->roomcategory}}</td>
                         <td>{{$categorydata->roomdescription}}</td>
+                        <td>{{$categorydata->price}}</td>
                         </tr>
                         </tbody>
                     </table>

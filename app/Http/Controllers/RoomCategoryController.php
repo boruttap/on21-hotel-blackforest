@@ -89,10 +89,12 @@ class RoomCategoryController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function destroy($id)
     {
-        //
+        RoomCategory::where('id',$id)->delete();
+        return view('adminpanel/roomcategory/deleteroomcategory',['categorydata'=>$categorydata]);
+
     }
 }

@@ -9,6 +9,9 @@
                 <h6> <a href="{{url('admin/roomcategory')}}" class="float-left btn btn-success btn-sm">Zurück zu allen Kategorien</a></h6>
             </div>
             <div class="card-body">
+                <form method="post" action="{{url('admin/roomcategory/'.$categorydata->id)}}">
+                    @csrf
+                    @method('put')
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
@@ -20,9 +23,8 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td>Dynamische ID</td>
-                            <td><input name="category" type="text" class="form-control" /></td>
-                            <td><input name="description" type="text" class="form-control" /></td>
+                            <td><input value="{{$categorydata->roomcategory}}" name="category" type="text" class="form-control" /></td>
+                            <td><input value="{{$categorydata->roomdescription}}" name="description" type="text" class="form-control" /></td>
                             <td>
                                 <input type="submit" class="btn btn-primary">
                             </td>
@@ -30,6 +32,7 @@
                         </tbody>
                     </table>
                 </div>
+                </form>
             </div>
         </div>
 

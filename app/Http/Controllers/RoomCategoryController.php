@@ -60,11 +60,12 @@ class RoomCategoryController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function edit($id)
     {
-        //
+        $categorydata=RoomCategory::find($id);
+        return view('adminpanel/roomcategory/editroomcategory',['categorydata'=>$categorydata]);
     }
 
     /**
@@ -72,11 +73,16 @@ class RoomCategoryController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function update(Request $request, $id)
     {
-        //
+        $categorydata = RoomCategory::find($id);
+        $categorydata->roomcategory=$request->category;
+        $categorydata->roomdescription=$request->description;
+        $categorydata->save();
+
+        return redirect('admin/roomcategory/')->with('success', 'Die Kategorie wurde hinzugefügt.');
     }
 
     /**

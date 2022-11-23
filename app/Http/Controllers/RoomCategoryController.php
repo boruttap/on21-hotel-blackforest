@@ -44,7 +44,7 @@ class RoomCategoryController extends Controller
         $categorydata->roomcategory=$request->category;
         $categorydata->roomdescription=$request->description;
         $categorydata->price=$request->price;
-        $categorydata->images=$request->image;
+        $categorydata->images=$request->file('image')->getClientOriginalName();
         $categorydata->save();
 
         return redirect('admin/roomcategory/')->with('success', 'Die Kategorie wurde hinzugefügt.');
@@ -83,10 +83,13 @@ class RoomCategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->file('image')->move(public_path('categoryimages'),$request->file('image')->getClientOriginalName());
+
         $categorydata = RoomCategory::find($id);
         $categorydata->roomcategory=$request->category;
         $categorydata->roomdescription=$request->description;
         $categorydata->price=$request->price;
+        $categorydata->images=$request->file('image')->getClientOriginalName();
         $categorydata->save();
 
         return redirect('admin/roomcategory/')->with('success', 'Die Kategorie wurde hinzugefügt.');

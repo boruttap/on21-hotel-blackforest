@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\RoomCategoryController;
 use App\Http\Controllers\RoomController;
 use Illuminate\Support\Facades\Route;
@@ -30,3 +31,7 @@ Route::resource('admin/roomcategory', RoomCategoryController::class);
 // adminPanel room
 Route::get('admin/room/{id}/delete',[RoomController::class,'destroy']);
 Route::resource('admin/room', RoomController::class);
+
+// adminPanel worker
+Route::get('admin/worker/{id}/delete',[AdminController::class,'destroy']);
+Route::resource('admin/worker', AdminController::class);

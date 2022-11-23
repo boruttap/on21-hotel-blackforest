@@ -38,12 +38,11 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-        $roomdata = new RoomCategory;
-        $roomdata->roomcategory=$request->roomcategory;
+        $roomdata = new Room;
         $roomdata->title=$request->title;
         $roomdata->save();
 
-        return redirect('admin/rooms/')->with('success', 'Der Raum wurde hinzugefügt.');
+        return redirect('admin/room/')->with('success', 'Der Raum wurde hinzugefügt.');
     }
 
     /**

@@ -26,7 +26,6 @@
                         @if($roomdata)
                             @foreach($roomdata as $data)
                                     <td>{{$data->id}}</td>
-                                    <td>{{$data->roomdata->roomcategory}}</td>
                                     <td>{{$data->title}}</td>
                                     <td>
                                         <a href="{{url('admin/room/'.$data->id)}}" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>

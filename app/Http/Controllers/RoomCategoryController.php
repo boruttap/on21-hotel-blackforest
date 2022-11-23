@@ -94,7 +94,7 @@ class RoomCategoryController extends Controller
     public function destroy($id)
     {
         RoomCategory::where('id',$id)->delete();
-        return redirect('admin/roomcategory/')->with('success','Die Kategorie wurde gelöscht.');
+        return redirect('admin/roomcategory/')->with('delete','Die Kategorie wurde gelöscht.');
 
     }
 }

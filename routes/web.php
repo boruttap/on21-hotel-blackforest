@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\RoomCategoryController;
+use App\Http\Controllers\RoomController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,7 +23,10 @@ Route::get('/', function () {
 Route::get('admin', function () {
     return view('/adminPanel/dashboard');
 });
-
+// adminPanel roomCategory
 Route::get('admin/roomcategory/{id}/delete',[RoomCategoryController::class,'destroy']);
 Route::resource('admin/roomcategory', RoomCategoryController::class);
 
+// adminPanel room
+Route::get('admin/room/{id}/delete',[RoomController::class,'destroy']);
+Route::resource('admin/room', RoomController::class);

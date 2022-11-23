@@ -66,7 +66,7 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Custom Components:</h6>
-                    <a class="collapse-item" href="#">Neue Kategorie hinzufügen</a>
+                    <a class="collapse-item" href="{{url('admin/roomcategory/create')}}">Neue Kategorie hinzufügen</a>
                     <a class="collapse-item" href="{{url('admin/roomcategory')}}">Alle Kategorien anzeigen</a>
                 </div>
             </div>
@@ -82,8 +82,8 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Custom Components:</h6>
-                    <a class="collapse-item" href="#">Neue Zimmer hinzufügen</a>
-                    <a class="collapse-item" href="#">Alle Zimmer anzeigen</a>
+                    <a class="collapse-item" href="{{url('admin/room/create')}}">Neue Zimmer hinzufügen</a>
+                    <a class="collapse-item" href="{{url('admin/room')}}">Alle Zimmer anzeigen</a>
                 </div>
             </div>
         </li>

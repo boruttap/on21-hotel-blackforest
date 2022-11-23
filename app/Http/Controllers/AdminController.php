@@ -92,4 +92,17 @@ class AdminController extends Controller
     {
         //
     }
+
+    function login(){
+        return view('/adminpanel/login');
+    }
+
+    function check(Request $request){
+        $request->validate([
+            'email'=>'required|email',
+            'password'=>'required',
+        ]);
+
+    }
+
 }

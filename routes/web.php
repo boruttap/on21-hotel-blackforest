@@ -20,10 +20,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// adminPanel
-Route::get('admin', function () {
-    return view('/adminPanel/dashboard');
+// Admin Login
+Route::get('admin/login',function () {
+    return view('/adminPanel/login');
 });
+
+// adminPanel
+Route::get('admin/login',[AdminController::class,'login']);
+Route::post('admin/login',[AdminController::class,'check']);
+
+
 // adminPanel roomCategory
 Route::get('admin/roomcategory/{id}/delete',[RoomCategoryController::class,'destroy']);
 Route::resource('admin/roomcategory', RoomCategoryController::class);
@@ -35,3 +41,6 @@ Route::resource('admin/room', RoomController::class);
 // adminPanel worker
 Route::get('admin/worker/{id}/delete',[AdminController::class,'destroy']);
 Route::resource('admin/worker', AdminController::class);
+
+
+

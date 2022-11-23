@@ -23,5 +23,6 @@ Route::get('admin', function () {
     return view('/adminPanel/dashboard');
 });
 
+Route::get('admin/roomcategory/{id}/delete',[RoomCategoryController::class,'destroy']);
 Route::resource('admin/roomcategory', RoomCategoryController::class);
 

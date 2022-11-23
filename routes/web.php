@@ -25,4 +25,3 @@ Route::get('admin', function () {
 
 Route::resource('admin/roomcategory', RoomCategoryController::class);
 
-

@@ -13,15 +13,13 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                         <tr>
-                            <th>#</th>
                             <th>Kategorie</th>
                             <th>Beschreibung</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <td>Dynamische ID</td>
-                        <td>Dynamische Kategorie</td>
-                        <td>Dynamische Beschreibung</td>
+                        <td>{{$categorydata->roomcategory}}</td>
+                        <td>{{$categorydata->roomdescription}}</td>
                         </tr>
                         </tbody>
                     </table>

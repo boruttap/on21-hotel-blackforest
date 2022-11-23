@@ -9,7 +9,7 @@
                 <h6> <a href="{{url('admin/roomcategory')}}" class="float-left btn btn-success btn-sm">Zurück zu allen Kategorien</a></h6>
             </div>
             <div class="card-body">
-                <form method="post" action="{{url('admin/roomcategory')}}">
+                <form method="post" enctype="multipart/form-data" action="{{url('admin/roomcategory')}}">
                     @csrf
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -18,6 +18,7 @@
                             <th>Kategorie</th>
                             <th>Bezeichnung</th>
                             <th>Preis (€)</th>
+                            <th>Kategoriebild</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -25,8 +26,8 @@
                             <td><input name="category" type="text" class="form-control" /></td>
                             <td><input name="description" type="text" class="form-control" /></td>
                             <td><input name="price" type="number" class="form-control"></td>
-                            <td>
-                                <input type="submit" class="btn btn-primary">
+                            <td><input name="image" type="file" class="form-control"></td>
+                            <td><input type="submit" class="btn btn-primary">
                             </td>
                         </tr>
                         </tbody>

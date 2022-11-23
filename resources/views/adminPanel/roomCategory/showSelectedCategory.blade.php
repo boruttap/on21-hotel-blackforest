@@ -16,12 +16,14 @@
                             <th>Kategorie</th>
                             <th>Beschreibung</th>
                             <th>Preis</th>
+                            <th>Bild</th>
                         </tr>
                         </thead>
                         <tbody>
                         <td>{{$categorydata->roomcategory}}</td>
                         <td>{{$categorydata->roomdescription}}</td>
                         <td>{{$categorydata->price}}</td>
+                        <td> <img src="../../../categoryimages/{{$categorydata->images}}"> </td>
                         </tr>
                         </tbody>
                     </table>

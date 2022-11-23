@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\roomCategory;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class RoomCategoryController extends Controller
 {
@@ -36,10 +37,14 @@ class RoomCategoryController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->file('image')->move(public_path('categoryimages'),$request->file('image')->getClientOriginalName());
+
         $categorydata = new RoomCategory;
         $categorydata->roomcategory=$request->category;
         $categorydata->roomdescription=$request->description;
         $categorydata->price=$request->price;
+        $categorydata->images=$request->image;
         $categorydata->save();
 
         return redirect('admin/roomcategory/')->with('success', 'Die Kategorie wurde hinzugefügt.');

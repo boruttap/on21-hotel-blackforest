@@ -5,11 +5,14 @@
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h3 class="m-0 font-weight-bold text-primary">Alle Kategorien</h3>
+                <h3 class="m-0 font-weight-bold text-primary">Alle Zimmer</h3>
                 <h6 class="m-0 font-weight-normal text-primary">Hier können neue Zimmer zu einer Kategorie hinzugefügt werden.</h6>
                 <h6> <a href="{{url('admin/room/create')}}" class="float-left btn btn-success btn-sm">Neues Zimmer hinzufügen</a></h6>
             </div>
             <div class="card-body">
+                @if(Session::has('delete'))
+                    <p class="text-danger">{{session('delete')}}</p>
+                @endif
                 @if(Session::has('success'))
                     <p class="text-success">{{session('success')}}</p>
                 @endif

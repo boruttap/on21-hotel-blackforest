@@ -66,7 +66,7 @@ class RoomController extends Controller
     public function edit($id)
     {
         $roomdata=Room::find($id);
-        return view('adminpanel/rooms/editselectedroom',['roomdata'=>$roomdata]);
+        return view('adminpanel/rooms/editroom',['roomdata'=>$roomdata]);
     }
 
     /**
@@ -78,11 +78,11 @@ class RoomController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $roomdata = RoomCategory::find($id);
+        $roomdata = Room::find($id);
         $roomdata->title=$request->title;
         $roomdata->save();
 
-        return redirect('admin/rooms/')->with('success', 'Der Raum wurde hinzugefügt.');
+        return redirect('admin/room/')->with('success', 'Der Raum wurde hinzugefügt.');
     }
 
     /**
@@ -94,6 +94,6 @@ class RoomController extends Controller
     public function destroy($id)
     {
         Room::where('id',$id)->delete();
-        return redirect('admin/rooms/')->with('success','Der Raum wurde gelöscht..');
+        return redirect('admin/room/')->with('delete','Der Raum wurde gelöscht.');
     }
 }

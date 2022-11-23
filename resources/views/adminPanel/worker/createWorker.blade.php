@@ -26,18 +26,16 @@
                             <tr>
                                 <td><input name="firstname" type="text" class="form-control" /></td>
                                 <td><input name="secondname" type="text" class="form-control" /></td>
-                                <td><input name="email" type="number" class="form-control"></td>
-                                <td><input name="password" type="text" class="form-control"></td>
+                                <td><input name="email" type="email" class="form-control"></td>
+                                <td><input name="password" type="password" class="form-control"></td>
                                 <td><select name="status" class="form-control">
                                     <option value="0">Kategorie auswählen</option>
-                                        <option value="0">Aushilfe</option>
-                                        <option value="1">Auszubildener</option>
-                                        <option value="2">Angestellter</option>
-                                        <option value="3">Geschäftsführer</option>
+                                        <option value="1">Aushilfe</option>
+                                        <option value="2">Auszubildener</option>
+                                        <option value="3">Angestellter</option>
+                                        <option value="4">Geschäftsführer</option>
                                     </select>
-
-                                </td>
-
+                                <td><input type="submit" class="btn btn-primary"></td>
                             </tr>
                             </tbody>
                         </table>

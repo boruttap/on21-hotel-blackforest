@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('secondname');
             $table->string('email');
             $table->string('password');
-            $table->string('confirmpassword');
             $table->string('status');
+            $table->timestamps();
         });
     }
 

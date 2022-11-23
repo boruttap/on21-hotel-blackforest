@@ -15,7 +15,7 @@ class AdminController extends Controller
     public function index()
     {
         $admindata=Admin::All();
-        return view('adminpanel/worker/createWorker',['admindata'=>$admindata]);
+        return view('adminpanel/worker/showworker',['admindata'=>$admindata]);
     }
 
     /**
@@ -36,7 +36,16 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-    //
+        $admindata = new Admin;
+        $admindata->firstname=$request->firstname;
+        $admindata->secondname=$request->secondname;
+        $admindata->email=$request->email;
+        $admindata->password=$request->password;
+        $admindata->status=$request->status;
+
+        $admindata->save();
+
+        return redirect('admin/worker/')->with('success', 'Die Kategorie wurde hinzugefügt.');
     }
 
     /**

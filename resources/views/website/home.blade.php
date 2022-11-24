@@ -11,17 +11,18 @@
         </div>
     </div>
 
-    @foreach($categorydata as $data)
-    <div class="card" style="width: 18rem;">
-        <img src="../../../categoryimages/{{$data->images}}">
-        <div class="card-body">
-            <h5 class="card-title">{{$data->roomcategory}}</h5>
-            <p class="card-text">{{$data->roomdescription}}</p>
-            <a href="#" class="btn btn-primary">Buchung anfragen</a>
-        </div>
+    <div class="container my-4">
+        @foreach($categorydata as $data)
+            <div class="card" style="width: 18rem;">
+                <img src="../../../categoryimages/{{$data->images}}">
+                 <div class="card-body">
+                    <h5 class="card-title">{{$data->roomcategory}}</h5>
+                    <p class="card-text">{{$data->roomdescription}}</p>
+                    <a href="#" class="btn btn-primary">Buchung anfragen</a>
+            </div>
+            @endforeach
     </div>
-    @endforeach
 
 
-</div>
+    </div>
 @endsection

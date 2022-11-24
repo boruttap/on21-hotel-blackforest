@@ -37,7 +37,11 @@
                         <div class="col-lg-12">
                             <div class="p-5">
                                 <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                    <h1 class="h4 text-gray-900 mb-4">Willkommen beim Mitarbeiter-Login!</h1>
+                                    <h6 class="h6 text-gray-900 mb-1">Du bist Mitarbeiter beim Hotel Blackforest?</h6>
+                                    <h6 class="h6 text-gray-900 mb-4">Dann kannst du dich hier mit deinen Zugangsdaten anmelden!</h6>
+                                    <h6 class="h7 text-gray-900 mb-1">Kein Mitarbeiter? Dann hier lang:</h6>
+                                    <a href="{{url('/')}}" class="btn btn-info btn-sm mb-4">Zurück zur Website.</a>
                                 </div>
                                 <form class="user" method="post" action="{{url('admin/login')}}">
                                     @csrf

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\roomCategory;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class HomeController extends Controller
 {
@@ -21,8 +23,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-    {
-        return view('website/home');
+
+    public function index(){
+        $categorydata=roomCategory::all();
+        return view('/website/home',['categorydata'=>$categorydata]);
     }
 }

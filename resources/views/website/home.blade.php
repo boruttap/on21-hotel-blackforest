@@ -4,22 +4,24 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+            <h3> Herzlich Willkommen beim Hotel Blackforest</h3>
+            <h5>Unsere neuste Zimmerkategorie:</h5>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('Du wurdest erfolgreich angemeldet.') }}
-                </div>
             </div>
         </div>
     </div>
-</div>
+
+    @foreach($categorydata as $data)
+    <div class="card" style="width: 18rem;">
+        <img src="../../../categoryimages/{{$data->images}}">
+        <div class="card-body">
+            <h5 class="card-title">{{$data->roomcategory}}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    @endforeach
+
 
 </div>
 @endsection

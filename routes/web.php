@@ -21,6 +21,11 @@ use Illuminate\Support\Facades\Route;
 // Homepage
 Route::resource('/', HomeController::class);
 
+Route::get('/about', function () {
+    return view('website/about');
+});
+
+
 // Admin
 Route::get('admin/dashboard', function () {
     return view('/adminPanel/dashboard');

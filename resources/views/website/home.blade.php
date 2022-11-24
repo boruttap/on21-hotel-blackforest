@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <h3> Herzlich Willkommen beim Hotel Blackforest</h3>
-            <h5>Unsere neuste Zimmerkategorie:</h5>
+            <h5>Unsere Zimmerkategorien:</h5>
 
             </div>
         </div>
@@ -16,8 +16,8 @@
         <img src="../../../categoryimages/{{$data->images}}">
         <div class="card-body">
             <h5 class="card-title">{{$data->roomcategory}}</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <p class="card-text">{{$data->roomdescription}}</p>
+            <a href="#" class="btn btn-primary">Buchung anfragen</a>
         </div>
     </div>
     @endforeach

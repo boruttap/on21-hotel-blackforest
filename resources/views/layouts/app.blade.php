@@ -49,10 +49,10 @@
                             <a href="{{url('admin/login/')}}" class="btn btn-info btn-sm">Mitarbeiter-Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Unsere Zimmer</a>
+                            <a class="nav-link" href="#">Buchung anfragen</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Unsere Mitarbeiter</a>
+                            <a class="nav-link" href="{{url('/about')}}">Unsere Mitarbeiter</a>
                         </li>
                         @guest
                             @if (Route::has('login'))

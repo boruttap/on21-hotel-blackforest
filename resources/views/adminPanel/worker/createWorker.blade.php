@@ -30,10 +30,10 @@
                                 <td><input name="password" type="password" class="form-control"></td>
                                 <td><select name="status" class="form-control">
                                     <option value="0">Kategorie auswählen</option>
-                                        <option value="1">Aushilfe</option>
-                                        <option value="2">Auszubildener</option>
-                                        <option value="3">Angestellter</option>
-                                        <option value="4">Geschäftsführer</option>
+                                        <option value="Aushilfe">Aushilfe</option>
+                                        <option value="Auszubildener">Auszubildener</option>
+                                        <option value="Angestellter">Angestellter</option>
+                                        <option value="Geschäftsführer">Geschäftsführer</option>
                                     </select>
                                 <td><input type="submit" class="btn btn-primary"></td>
                             </tr>

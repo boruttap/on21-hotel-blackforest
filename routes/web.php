@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\RoomCategoryController;
 use App\Http\Controllers\RoomController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,6 +41,10 @@ Route::resource('admin/room', RoomController::class);
 // adminPanel worker
 Route::get('admin/worker/{id}/delete',[AdminController::class,'destroy']);
 Route::resource('admin/worker', AdminController::class);
+
+// adminPanel customer
+Route::get('admin/customer/{id}/delete',[UserController::class,'destroy']);
+Route::resource('admin/customer', UserController::class);
 
 
 

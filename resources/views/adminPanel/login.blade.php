@@ -43,12 +43,13 @@
                                     @csrf
                                     <div class="form-group">
                                         <input name="email" type="email" class="form-control form-control-user"
-                                               id="exampleInputEmail" aria-describedby="emailHelp"
-                                               placeholder="Enter Email Address...">
+                                               aria-describedby="emailHelp"
+                                               placeholder="E-Mail Adresse"
+                                                required>
                                     </div>
                                     <div class="form-group">
                                         <input name="password" type="password" class="form-control form-control-user"
-                                               id="exampleInputPassword" placeholder="Password">
+                                               placeholder="Passwort" required>
                                     </div>
                                     <div class="form-group">
                                         <div class="custom-control custom-checkbox small">
@@ -57,12 +58,14 @@
                                                 Me</label>
                                         </div>
                                     </div>
-                                    <a href="index.html" class="btn btn-primary btn-user btn-block">
-                                        Login
-                                    </a>
+                                    <input type="submit" class="btn btn-primary btn-user btn-block" value="Anmelden" />
                                     <hr>
 
                                 </form>
+
+                                @if(Session::has('msg'))
+                                    <p class="text-danger">{{session('msg')}}</p>
+                                @endif
                                 <hr>
                                 <div class="text-center">
                                     <a class="small" href="forgot-password.html">Forgot Password?</a>

@@ -20,15 +20,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Admin Login
-Route::get('admin/login',function () {
-    return view('/adminPanel/login');
+// Admin
+Route::get('admin/dashboard', function () {
+    return view('/adminPanel/dashboard');
 });
 
-// adminPanel
+// adminPanel Login
 Route::get('admin/login',[AdminController::class,'login']);
-Route::post('admin/login',[AdminController::class,'check']);
-
+Route::post('admin/login', [AdminController::class, 'authenticate']);
 
 // adminPanel roomCategory
 Route::get('admin/roomcategory/{id}/delete',[RoomCategoryController::class,'destroy']);

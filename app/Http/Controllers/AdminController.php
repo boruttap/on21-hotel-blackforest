@@ -93,16 +93,25 @@ class AdminController extends Controller
         //
     }
 
-    function login(){
+    public function login(){
         return view('/adminpanel/login');
     }
 
-    function check(Request $request){
-        $request->validate([
-            'email'=>'required|email',
-            'password'=>'required',
+    public function authenticate(Request $request)
+    {
+           $admindata = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
         ]);
 
+        if (auth()->attempt($admindata)) {
+            $request->session()->regenerate();
+
+            return redirect('admin/dashboard');
+        }
+            {
+                return redirect('admin/login')->with('msg', 'Falsche Daten');
+            }
     }
 
 }

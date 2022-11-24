@@ -49,7 +49,7 @@
                             <a href="{{url('admin/login/')}}" class="btn btn-info btn-sm">Mitarbeiter-Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Buchung anfragen</a>
+                            <a class="nav-link" href="{{url('/booking')}}">Buchung anfragen</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('/about')}}">Unsere Mitarbeiter</a>

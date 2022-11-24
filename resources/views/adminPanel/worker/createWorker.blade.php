@@ -9,6 +9,9 @@
                 <h6> <a href="{{url('admin/worker')}}" class="float-left btn btn-success btn-sm">Zurück zu allen Mitarbeitern</a></h6>
             </div>
             <div class="card-body">
+                @if(Session::has('msg'))
+                    <p class="text-danger">{{session('msg')}}</p>
+                @endif
                 <form method="post" enctype="multipart/form-data" action="{{url('admin/worker')}}">
                     @csrf
                     <div class="table-responsive">

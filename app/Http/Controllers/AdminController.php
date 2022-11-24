@@ -40,8 +40,16 @@ class AdminController extends Controller
         $admindata->firstname=$request->firstname;
         $admindata->secondname=$request->secondname;
         $admindata->email=$request->email;
-        $admindata->password=$request->password;
+        $admindata->password=sha1($request->password);
         $admindata->status=$request->status;
+
+        $listexistingadmins = Admin::all();
+
+        foreach ($listexistingadmins as $existingadmin) {
+            if ($existingadmin->email == $admindata->email) {
+                return redirect('admin/worker/create')->with('msg', 'E-Mail bereits vergeben.');
+            }
+        }
 
         $admindata->save();
 
@@ -99,19 +107,21 @@ class AdminController extends Controller
 
     public function authenticate(Request $request)
     {
-           $admindata = $request->validate([
+        $request->validate([
             'email' => 'required|email',
             'password' => 'required',
         ]);
 
-        if (auth()->attempt($admindata)) {
-            $request->session()->regenerate();
-
-            return redirect('admin/dashboard');
-        }
-            {
-                return redirect('admin/login')->with('msg', 'Falsche Daten');
+        $admindata = Admin::All();
+        foreach ($admindata as $admin) {
+            if ($admin->email == $request->email) {
+                if ($admin->password == sha1($request->password)) {
+                    return redirect('admin/dashboard');
+                }
             }
+        }
+
+        return redirect('admin/login')->with('msg', 'Falsche Daten');
     }
 
 }

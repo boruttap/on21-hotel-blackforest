@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 // Homepage
 Route::resource('/', HomeController::class);
+
 Route::resource('/about', AboutController::class);
 
 // Admin
@@ -47,8 +48,6 @@ Route::resource('admin/worker', AdminController::class);
 // adminPanel customer
 Route::get('admin/customer/{id}/delete',[UserController::class,'destroy']);
 Route::resource('admin/customer', UserController::class);
-
-
 
 
 Auth::routes();

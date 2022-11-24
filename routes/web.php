@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoomCategoryController;
@@ -20,11 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 // Homepage
 Route::resource('/', HomeController::class);
-
-Route::get('/about', function () {
-    return view('website/about');
-});
-
+Route::resource('/about', AboutController::class);
 
 // Admin
 Route::get('admin/dashboard', function () {

@@ -19,12 +19,13 @@
                 <th>Position</th>
             </tr>
             </thead>
+            @foreach($admindata as $data)
             <tbody>
-            <td></td>
-            <td></td>
-            <td></td>
-
+            <td>{{$data->firstname}}</td>
+            <td>{{$data->secondname}}</td>
+            <td>{{$data->status}}</td>
             </tbody>
+            @endforeach
         </table>
     </div>
     </div>

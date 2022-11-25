@@ -75,7 +75,8 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-       //
+        $admindata=Admin::find($id);
+        return view('adminpanel/worker/editworker',['admindata'=>$admindata]);
     }
 
     /**
@@ -87,7 +88,17 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $admindata = Admin::find($id);
+        $admindata->firstname=$request->firstname;
+        $admindata->secondname=$request->secondname;
+        $admindata->email=$request->email;
+        $admindata->password=sha1($request->password);
+        $admindata->status=$request->status;
+
+        $admindata->save();
+
+        return redirect('admin/worker/')->with('success', 'Der Mitarbeiter wurde bearbeitet.');
+
     }
 
     /**
@@ -98,7 +109,8 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Admin::where('id',$id)->delete();
+        return redirect('admin/worker/')->with('delete','Der Mitarbeiter wurde gelöscht.');
     }
 
     public function login(){

@@ -92,7 +92,7 @@ class RoomCategoryController extends Controller
         $categorydata->images=$request->file('image')->getClientOriginalName();
         $categorydata->save();
 
-        return redirect('admin/roomcategory/')->with('success', 'Die Kategorie wurde hinzugefügt.');
+        return redirect('admin/roomcategory/')->with('success', 'Die Kategorie wurde bearbeitet.');
     }
 
     /**

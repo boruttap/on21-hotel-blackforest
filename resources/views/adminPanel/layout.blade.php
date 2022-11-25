@@ -41,14 +41,19 @@
         <!-- Divider -->
         <hr class="sidebar-divider my-0">
 
+
+
         <!-- Nav Item - Dashboard -->
+        <li class="nav-item mt-4 pl-4">
+            <h6> <a href="{{url('/')}}" class="btn btn-success  btn-sm">Zur Website</a></h6>
+        </li>
         <li class="nav-item">
             <a class="nav-link" href="{{url('admin/dashboard')}}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Übersicht</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{url('admin/dashboard')}}">
+            <a class="nav-link" href="{{url('admin/bookingrequests')}}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Buchungsanfragen</span></a>
         </li>
@@ -120,8 +125,6 @@
             </div>
         </li>
 
-        <h6> <a href="{{url('/')}}" class="float-left btn btn-success btn-sm">Zur Website</a></h6>
-
 
     </ul>
     <!-- End of Sidebar -->
@@ -138,15 +141,6 @@
         </div>
         <!-- End of Main Content -->
 
-        <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-            <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Your Website 2020</span>
-                </div>
-            </div>
-        </footer>
-        <!-- End of Footer -->
 
     </div>
     <!-- End of Content Wrapper -->

@@ -6,28 +6,23 @@
         <!-- Content Row -->
         <div class="row">
 
-            <!-- Earnings (Monthly) Card Example -->
+
             <div class="col-xl-3 col-md-6 mb-4">
                 <div class="card border-left-primary shadow h-100 py-2">
                     <h6> <a href="{{url('admin/roomcategory/')}}" class="float-left btn btn-success btn-sm">Alle Zimmerkategorien anzeigen</a></h6>
                     <h6> <a href="{{url('admin/rooms/')}}" class="float-left btn btn-success btn-sm">Alle Zimmer anzeigen</a></h6>
                     <h6> <a href="{{url('admin/worker/')}}" class="float-left btn btn-success btn-sm">Alle Mitarbeiter anzeigen</a></h6>
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                    Anzahl Zimmer</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
-                            </div>
-                            <div class="col-auto">
-                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                            </div>
-                        </div>
-                    </div>
+                    <h6> <a href="{{url('admin/customer/')}}" class="float-left btn btn-success btn-sm">Alle Kunden anzeigen</a></h6>
                 </div>
             </div>
-        <!-- Content Row -->
-        <div class="row">
+
+            <div class="col-xl-3 col-md-2 mb-5">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <h3> <a href="{{url('admin/roomcategory/')}}" class="float-left btn btn-danger btn-sm">Neue Buchungsanfragen ansehen</a></h3>
+
+                </div>
+            </div>
+
 
 
     </div>

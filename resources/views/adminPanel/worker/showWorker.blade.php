@@ -36,7 +36,6 @@
                                 <td>{{$data->email}}</td>
                                 <td>{{$data->status}}</td>
                                 <td>
-                                    <a href="{{url('admin/worker/'.$data->id)}}" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
                                     <a href="{{url('admin/worker/'.$data->id.'/edit')}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
                                     <a onclick="return confirm('Soll der Mitarbeiter gelöscht werden??')" href="{{url('admin/worker/'.$data->id).'/delete'}}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                 </td>

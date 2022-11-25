@@ -13,8 +13,8 @@
                 @csrf
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    <input name="email" type="email" value="{{ Auth::user()->email}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                    <div id="emailHelp" class="form-text">Dies ist die deinem Account zugeordnete E-Mail Adresse.</div>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Datum Anreise</label>

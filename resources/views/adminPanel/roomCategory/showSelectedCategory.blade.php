@@ -6,7 +6,8 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h3 class="m-0 font-weight-bold text-primary">Ausgewählte Kategorie</h3>
-                <h6> <a href="{{url('admin/roomcategory')}}" class="float-left btn btn-success btn-sm">Zurück zu allen Kategorien</a></h6>
+                <h6><a href="{{url('admin/roomcategory')}}" class="float-left btn btn-success btn-sm">Zurück zu allen
+                        Kategorien</a></h6>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -23,8 +24,8 @@
                         <td>{{$categorydata->roomcategory}}</td>
                         <td>{{$categorydata->roomdescription}}</td>
                         <td>{{$categorydata->price}}</td>
-                        <td> <img src="../../../categoryimages/{{$categorydata->images}}"> </td>
-                        </tr>
+                        <td><img src="../../../categoryimages/{{$categorydata->images}}"></td>
+
                         </tbody>
                     </table>
                 </div>

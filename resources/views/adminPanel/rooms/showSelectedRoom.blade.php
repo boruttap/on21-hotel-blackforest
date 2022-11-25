@@ -6,7 +6,8 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h3 class="m-0 font-weight-bold text-primary">Ausgewähltes Zimmer</h3>
-                <h6> <a href="{{url('admin/room')}}" class="float-left btn btn-success btn-sm">Zurück zu allen Zimmern</a></h6>
+                <h6><a href="{{url('admin/room')}}" class="float-left btn btn-success btn-sm">Zurück zu allen
+                        Zimmern</a></h6>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -18,7 +19,6 @@
                         </thead>
                         <tbody>
                         <td>{{$roomdata->title}}</td>
-                        </tr>
                         </tbody>
                     </table>
                 </div>

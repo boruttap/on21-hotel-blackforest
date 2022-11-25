@@ -42,10 +42,9 @@
         <hr class="sidebar-divider my-0">
 
 
-
         <!-- Nav Item - Dashboard -->
         <li class="nav-item mt-4 pl-4">
-            <h6> <a href="{{url('/')}}" class="btn btn-success  btn-sm">Zur Website</a></h6>
+            <h6><a href="{{url('/')}}" class="btn btn-success  btn-sm">Zur Website</a></h6>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{url('admin/dashboard')}}">

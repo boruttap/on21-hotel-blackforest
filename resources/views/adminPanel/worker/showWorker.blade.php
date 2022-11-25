@@ -6,8 +6,10 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h3 class="m-0 font-weight-bold text-primary">Alle Mitarbeiter</h3>
-                <h6 class="m-0 font-weight-normal text-primary">Hier können neue Mitarbeiter für den Adminbereich hinzugefügt werden.</h6>
-                <h6> <a href="{{url('admin/worker/create')}}" class="float-left btn btn-success btn-sm">Neuen Mitarbeiter hinzufügen</a></h6>
+                <h6 class="m-0 font-weight-normal text-primary">Hier können neue Mitarbeiter für den Adminbereich
+                    hinzugefügt werden.</h6>
+                <h6><a href="{{url('admin/worker/create')}}" class="float-left btn btn-success btn-sm">Neuen Mitarbeiter
+                        hinzufügen</a></h6>
             </div>
             <div class="card-body">
                 @if(Session::has('delete'))
@@ -36,8 +38,11 @@
                                 <td>{{$data->email}}</td>
                                 <td>{{$data->status}}</td>
                                 <td>
-                                    <a href="{{url('admin/worker/'.$data->id.'/edit')}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
-                                    <a onclick="return confirm('Soll der Mitarbeiter gelöscht werden??')" href="{{url('admin/worker/'.$data->id).'/delete'}}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                    <a href="{{url('admin/worker/'.$data->id.'/edit')}}" class="btn btn-primary btn-sm"><i
+                                            class="fa fa-edit"></i></a>
+                                    <a onclick="return confirm('Soll der Mitarbeiter gelöscht werden??')"
+                                       href="{{url('admin/worker/'.$data->id).'/delete'}}"
+                                       class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                 </td>
                                 </tr>
                             @endforeach

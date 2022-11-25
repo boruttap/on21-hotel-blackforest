@@ -6,8 +6,10 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h3 class="m-0 font-weight-bold text-primary">Buchungsanfragen</h3>
-                <h6 class="m-0 font-weight-normal text-primary">Hier werden alle Buchungsanfragen der Website angezeigt. </h6>
-                <h6 class="m-0 font-weight-normal text-danger">Reagieren Sie auf die Anfrage, indem Sie der entsprechenden E-Mail eine Nachricht schreiben. </h6>
+                <h6 class="m-0 font-weight-normal text-primary">Hier werden alle Buchungsanfragen der Website
+                    angezeigt. </h6>
+                <h6 class="m-0 font-weight-normal text-danger">Reagieren Sie auf die Anfrage, indem Sie der
+                    entsprechenden E-Mail eine Nachricht schreiben. </h6>
             </div>
             <div class="card-body">
                 <div class="table-responsive">

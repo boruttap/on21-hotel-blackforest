@@ -66,7 +66,7 @@
                     type: 'post',
                     data: formData,
                     dataType: 'json',
-                })
+                });
             });
         })
 

@@ -59,4 +59,4 @@ Route::resource('admin/bookingrequests', BookingRequestsController::class);
 Auth::routes();
 
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('/');

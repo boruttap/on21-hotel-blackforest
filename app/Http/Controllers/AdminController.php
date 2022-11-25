@@ -53,7 +53,7 @@ class AdminController extends Controller
 
         $admindata->save();
 
-        return redirect('admin/worker/')->with('success', 'Die Kategorie wurde hinzugefügt.');
+        return redirect('admin/worker/')->with('success', 'Der Mitarbeiter wurde hinzugefügt.');
     }
 
     /**

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\roomCategory;
 use Illuminate\Http\Request;
+use App\Models\BookingRequest;
 
 class BookingController extends Controller
 {
@@ -15,8 +16,21 @@ class BookingController extends Controller
     public function index(){
 
         $bookingdata=RoomCategory::all();
+        return view('/website/booking',['bookingdata'=>$bookingdata]);
+    }
 
-        return view('/website/booking',['booking'=>$bookingdata]);
+    public function store(Request $request)
+    {
+        $bookingdata=RoomCategory::all();
+        $bookingrequest = new BookingRequest;
+        $bookingrequest->email = $request->email;
+        $bookingrequest->arrivingdate = $request->arrivingdate;
+        $bookingrequest->departuredate = $request->departuredate;
+        $bookingrequest->roomcategory = $request->roomcategory;
+        $bookingrequest->save();
+
+        return view('website/booking',['bookingdata'=>$bookingdata]);
+
     }
 
 }

@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Homepage
-Route::resource('/', HomeController::class);
+Route::resource('/home', HomeController::class);
 
 Route::resource('/about', AboutController::class);
 Route::resource('/booking', BookingController::class);
@@ -59,4 +59,4 @@ Route::resource('admin/bookingrequests', BookingRequestsController::class);
 Auth::routes();
 
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('/');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('/home');

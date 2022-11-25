@@ -10,7 +10,7 @@
             <div class="col-xl-3 col-md-6 mb-4">
                 <div class="card border-left-primary shadow h-100 py-2">
                     <h6> <a href="{{url('admin/roomcategory/')}}" class="float-left btn btn-success btn-sm">Alle Zimmerkategorien anzeigen</a></h6>
-                    <h6> <a href="{{url('admin/rooms/')}}" class="float-left btn btn-success btn-sm">Alle Zimmer anzeigen</a></h6>
+                    <h6> <a href="{{url('admin/room/')}}" class="float-left btn btn-success btn-sm">Alle Zimmer anzeigen</a></h6>
                     <h6> <a href="{{url('admin/worker/')}}" class="float-left btn btn-success btn-sm">Alle Mitarbeiter anzeigen</a></h6>
                     <h6> <a href="{{url('admin/customer/')}}" class="float-left btn btn-success btn-sm">Alle Kunden anzeigen</a></h6>
                 </div>

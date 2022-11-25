@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\BookingRequestsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoomCategoryController;
 use App\Http\Controllers\RoomController;
@@ -51,6 +52,8 @@ Route::resource('admin/worker', AdminController::class);
 // adminPanel customer
 Route::get('admin/customer/{id}/delete',[UserController::class,'destroy']);
 Route::resource('admin/customer', UserController::class);
+
+Route::resource('admin/bookingrequests', BookingRequestsController::class);
 
 
 Auth::routes();

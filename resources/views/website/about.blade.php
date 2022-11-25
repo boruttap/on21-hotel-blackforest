@@ -10,23 +10,28 @@
         </div>
     </div>
 
-    <div class="table-responsive">
-        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-            <thead>
-            <tr>
-                <th>Vorname</th>
-                <th>Nachname</th>
-                <th>Position</th>
-            </tr>
-            </thead>
-            @foreach($admindata as $data)
-            <tbody>
-            <td>{{$data->firstname}}</td>
-            <td>{{$data->secondname}}</td>
-            <td>{{$data->status}}</td>
-            </tbody>
-            @endforeach
-        </table>
-    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Vorname</th>
+                            <th>Nachname</th>
+                            <th>Position</th>
+                        </tr>
+                        </thead>
+                        @foreach($admindata as $data)
+                        <tbody>
+                        <td>{{$data->firstname}}</td>
+                        <td>{{$data->secondname}}</td>
+                        <td>{{$data->status}}</td>
+                        </tbody>
+                        @endforeach
+                    </table>
+                </div>
+                </div>
+        </div>
     </div>
 @endsection

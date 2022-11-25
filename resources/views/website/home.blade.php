@@ -18,7 +18,7 @@
                  <div class="card-body">
                     <h5 class="card-title">{{$data->roomcategory}}</h5>
                     <p class="card-text">{{$data->roomdescription}}</p>
-                    <a href="#" class="btn btn-primary">Buchung anfragen</a>
+                    <a href="{{url('/booking')}}" class="btn btn-primary">Buchung anfragen</a>
             </div>
             @endforeach
     </div>
